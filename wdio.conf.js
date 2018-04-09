@@ -1,6 +1,10 @@
 let mochaTimeout = 100000;
 
 var config = {
+    protocol: 'https',
+    host: 'ondemand.saucelabs.com',
+    port: '443',
+
     // WebdriverIO will automatically configure the host based on the value of the user and key
     // See WebdriverIO's cloudservice.md document for more info.
     user: process.env.SAUCE_USERNAME,
@@ -10,11 +14,30 @@ var config = {
     * Each capability defined gets a child process so that tests automatically run in parallel
     * Refer to for more info https://github.com/webdriverio/webdriverio/issues/205#issuecomment-183345085
     */
-    maxInstances: 20,
+    maxInstances: 10,
     capabilities: [
-        {browserName: 'firefox', platform: 'Windows 10', version: '41.0', tunnelIdentifier: 'fakebusiness'},
-        {browserName: 'chrome', platform: 'OS X 10.10', version: '45.0', tunnelIdentifier: 'fakebusiness'},
-        {browserName: 'chrome', platform: 'Windows 8.1', version: '55', tunnelIdentifier: 'fakebusiness'}
+        // {browserName: 'firefox', platform: 'Windows 10', version: '41.0', tunnelIdentifier: 'fakebusiness'},
+        {
+            browserName: 'chrome',
+            platform: 'OS X 10.12',
+            version: '65',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            }
+        },
+
+        {
+            browserName: 'chrome',
+            platform: 'OS X 10.12',
+            version: '64',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            }
+        }
     ],
 
     specs: [
@@ -26,7 +49,7 @@ var config = {
     coloredLogs: true,
     screenshotPath: './errorShots/',
     reporters: ['spec'], // Optional with wdio-spec-reporter
-    // waitforTimeout: 10000,
+    waitforTimeout: 10000,
     connectionRetryTimeout: 10 * 60000,
     connectionRetryCount: 3,
     framework: 'mocha',
