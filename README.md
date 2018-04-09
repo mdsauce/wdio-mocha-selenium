@@ -1,4 +1,4 @@
-# Basic test suite with Mocha and Selenium
+# Basic test suites with Mocha and Selenium
 
 
 ## Setup
