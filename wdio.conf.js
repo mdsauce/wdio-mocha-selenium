@@ -18,6 +18,7 @@ var config = {
     capabilities: [
         // {browserName: 'firefox', platform: 'Windows 10', version: '41.0', tunnelIdentifier: 'fakebusiness'},
         {
+            name: 'Chrome 65 w/ 2.37 driver',
             browserName: 'chrome',
             platform: 'OS X 10.12',
             version: '65',
@@ -31,6 +32,7 @@ var config = {
         },
 
         {
+            name: 'Chrome 64 ipad mode',
             browserName: 'chrome',
             platform: 'OS X 10.12',
             version: '64',
@@ -42,6 +44,7 @@ var config = {
         },
 
         {
+            name: 'Chrome 65 w/ driver 2.35',
             browserName: 'chrome',
             platform: 'OS X 10.12',
             version: '65',
