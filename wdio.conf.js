@@ -32,6 +32,19 @@ var config = {
         },
 
         {
+            name: 'Chrome 65 w/ driver 2.35',
+            browserName: 'chrome',
+            platform: 'OS X 10.12',
+            version: '65',
+            chromedriverVersion: '2.35',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            }
+        },
+
+        {
             name: 'Chrome 64 ipad mode',
             browserName: 'chrome',
             platform: 'OS X 10.12',
@@ -44,17 +57,44 @@ var config = {
         },
 
         {
-            name: 'Chrome 65 w/ driver 2.35',
+            name: 'Windows Chrome 65 w/ driver 2.37',
             browserName: 'chrome',
-            platform: 'OS X 10.12',
+            platform: 'Windows 10',
             version: '65',
-            chromedriverVersion: '2.35',
+            chromedriverVersion: '2.37',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            }
+        },
+
+        {
+            name: 'Windows Chrome 65 w/ driver 2.36',
+            browserName: 'chrome',
+            platform: 'Windows 10',
+            version: '65',
+            chromedriverVersion: '2.37',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            }
+        },
+
+        {
+            name: 'Windows Chrome 64 w/ driver 2.36',
+            browserName: 'chrome',
+            platform: 'Windows 10',
+            version: '65',
+            chromedriverVersion: '2.37',
             chromeOptions: {
                 "mobileEmulation": {
                     "deviceName": "iPad"
                 }
             }
         }
+
     ],
 
     specs: [
