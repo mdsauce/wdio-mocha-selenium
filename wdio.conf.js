@@ -21,6 +21,19 @@ var config = {
             browserName: 'chrome',
             platform: 'OS X 10.12',
             version: '65',
+            chromedriverVersion: '2.37',
+            chromeOptions: {
+                "mobileEmulation": {
+                    "deviceName": "iPad"
+                }
+            },
+            seleniumVersion: '3.9.0'
+        },
+
+        {
+            browserName: 'chrome',
+            platform: 'OS X 10.12',
+            version: '64',
             chromeOptions: {
                 "mobileEmulation": {
                     "deviceName": "iPad"
@@ -31,7 +44,8 @@ var config = {
         {
             browserName: 'chrome',
             platform: 'OS X 10.12',
-            version: '64',
+            version: '65',
+            chromedriverVersion: '2.35',
             chromeOptions: {
                 "mobileEmulation": {
                     "deviceName": "iPad"
